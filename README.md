@@ -1,1 +1,1 @@
-Repositorio destinado as atividades da faculdade de Sistemas de Informação.
+Repositório destinado as atividades da faculdade de Sistemas de Informação.

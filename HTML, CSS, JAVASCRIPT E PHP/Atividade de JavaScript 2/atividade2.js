@@ -13,8 +13,12 @@ if (funcao == 1) {
     prop = n1 * n2;
     alert("Seu resultado é " + prop);
 } else if (funcao == 4) {
-    prop = n1 / n2;
-    alert("Seu resultado é " + prop);
+    if(n2 == 0){
+        alert("ERRO!")
+    }
+    else{
+        prop = n1 / n2;
+    alert("Seu resultado é " + prop);}
 } else {
     alert("Operação não encontrada!");
 }

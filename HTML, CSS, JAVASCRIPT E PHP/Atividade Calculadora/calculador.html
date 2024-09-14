@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h2>Calculadora Simples</h2>
+    <input type="number" id="valor1" placeholder="Digite o 1º valor: "><br> 
+    <input type="number" id="valor2" placeholder="Digite o 2º valor: "><br>
+    
+    <button onclick="adicao()" id="adi">+</button>
+    <button onclick="subtracao()" id="sub">-</button>
+    <button onclick="multiplicao()" id="mult">*</button>
+    <button onclick="divisao()" id="div">/</button>
+    <button onclick="clearCampos()" id="limpar">C</button>
+
+    <script>
+        function adicao(){
+            let n1 = parseFloat(document.getElementById("valor1").value);
+            let n2 = parseFloat(document.getElementById("valor2").value);
+            let resultado = n1 + n2
+            alert(resultado)
+        }
+        function divisao(){
+            let n1 = parseFloat(document.getElementById("valor1").value);
+            let n2 = parseFloat(document.getElementById("valor2").value);
+            let resultado = n1 / n2
+            alert(resultado)
+        }
+        function subtracao(){
+            let n1 = parseFloat(document.getElementById("valor1").value);
+            let n2 = parseFloat(document.getElementById("valor2").value);
+            let resultado = n1 - n2
+            alert(resultado)
+        }
+        function multiplicao(){
+            let n1 = parseFloat(document.getElementById("valor1").value);
+            let n2 = parseFloat(document.getElementById("valor2").value);
+            let resultado = n1 * n2
+            alert(resultado)
+        }
+        function clearCampos(){
+            document.getElementById("valor1").value = '';
+            document.getElementById("valor2").value = '';
+        }
+    </script>
+</body>
+</html>

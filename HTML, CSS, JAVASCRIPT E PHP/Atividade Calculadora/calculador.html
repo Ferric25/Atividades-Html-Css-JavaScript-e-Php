@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
+
 <body>
-    <h2>Calculadora Simples</h2>
-    <input type="number" id="valor1" placeholder="Digite o 1º valor: "><br> 
-    <input type="number" id="valor2" placeholder="Digite o 2º valor: "><br>
-    
-    <button onclick="adicao()" id="adi">+</button>
-    <button onclick="subtracao()" id="sub">-</button>
-    <button onclick="multiplicao()" id="mult">*</button>
-    <button onclick="divisao()" id="div">/</button>
-    <button onclick="clearCampos()" id="limpar">C</button>
+    <div class="calculadora">
+        <h2>Calculadora Simples</h2>
+        <input type="number" id="valor1" placeholder="Digite o 1º valor: "><br>
+        <input type="number" id="valor2" placeholder="Digite o 2º valor: "><br>
+        <input disabled type="text" id="resultado" placeholder="Resultado"><br>
+
+        <div class="botoes">
+            <button onclick="adicao()" id="adi">+</button>
+            <button onclick="subtracao()" id="sub">-</button>
+            <button onclick="multiplicao()" id="mult">*</button>
+            <button onclick="divisao()" id="div">/</button>
+            <button onclick="clearCampos()" id="limpar">C</button>
+        </div>
+    </div>
 
     <script>
-        function adicao(){
+        function adicao() {
             let n1 = parseFloat(document.getElementById("valor1").value);
             let n2 = parseFloat(document.getElementById("valor2").value);
-            let resultado = n1 + n2
-            alert(resultado)
+            let resultado = n1 + n2;
+            document.getElementById("resultado").value = resultado;
         }
-        function divisao(){
+
+        function divisao() {
             let n1 = parseFloat(document.getElementById("valor1").value);
             let n2 = parseFloat(document.getElementById("valor2").value);
-            let resultado = n1 / n2
-            alert(resultado)
+
+            if (n2 === 0) {
+                document.getElementById("resultado").value = "ERRO!";
+            } else {
+                let resultado = n1 / n2;
+                document.getElementById("resultado").value = resultado;
+            }
         }
-        function subtracao(){
+
+        function subtracao() {
             let n1 = parseFloat(document.getElementById("valor1").value);
             let n2 = parseFloat(document.getElementById("valor2").value);
-            let resultado = n1 - n2
-            alert(resultado)
+            let resultado = n1 - n2;
+            document.getElementById("resultado").value = resultado;
         }
-        function multiplicao(){
+
+        function multiplicao() {
             let n1 = parseFloat(document.getElementById("valor1").value);
             let n2 = parseFloat(document.getElementById("valor2").value);
-            let resultado = n1 * n2
-            alert(resultado)
+            let resultado = n1 * n2;
+            document.getElementById("resultado").value = resultado;
         }
-        function clearCampos(){
+
+        function clearCampos() {
             document.getElementById("valor1").value = '';
             document.getElementById("valor2").value = '';
+            document.getElementById("resultado").value = '';
         }
     </script>
 </body>
+
 </html>

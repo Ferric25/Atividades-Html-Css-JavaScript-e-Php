@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 360px; 
+    padding: 25px;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tela {
+    background-color: #222;
+    color: white;
+    font-size: 2.5rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    border-radius: 15px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    font-size: 1.7rem;
+    padding: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #222;
+    box-shadow: none;
+}
+
+button.zero {
+    grid-column: span 2;
+}
+
+button.igual {
+    background-color: #d35400;
+    grid-column: span 1;
+    height: calc(100% + 15px); 
+}
+
